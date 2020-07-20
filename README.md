@@ -1,5 +1,5 @@
 # C-programming-DS-ALGO-and-hackerrank-solution-
-solutions of  hackerrank  practice section in C with usefull link and discription
+solutions of  hackerrank  practice section in C with usefull link and discription and implementation of ALL DS and algorithms in C.
 
 
 1.[hackerrank solutions](https://github.com/saaarvesh/C-programming-DS-ALGO-and-hackerrank-solution-/tree/hackerrank-solution-in-c)
