@@ -11,6 +11,7 @@ struct node *first_delete(struct node *head);
 struct node *last_delete(struct node *head);
 struct node  *particular_delete(struct node *head,int d_after);
 struct node *particular_ddelete(struct node *head,int d);
+struct node *reverse(struct node *head);
 struct node{
     int data;
     struct node *next;
@@ -205,6 +206,27 @@ void print__link(struct node *head) {
    printf("\n");
 }
 
+//revesing SLL
+struct node *reverse(struct node *cur){
+      
+        struct node *prev=NULL;
+        struct node *nextp=NULL;
+
+        while(cur)
+        {
+         
+            nextp=cur->next;
+            cur->next=prev;
+      
+            prev=cur;
+            cur=nextp;
+
+
+        }
+        return prev;
+
+}
+
 
 int main()
 {
@@ -234,9 +256,10 @@ int main()
    printf("press 5 to delete the first node \n");
    printf("press 6 to delete the last node \n");
    printf("press 7 to delete the particular node \n");
+   printf("press 9 to reverse the LL \n");
    printf("press 8 particular node having particular data\n");
-   printf("press 9 to print the linklist \n");
-   printf("press 10 to stop \n");
+   printf("press 10 to print the linklist \n");
+   printf("press 11 to stop \n");
     scanf("%d",&choice);
    
    
@@ -287,12 +310,15 @@ int main()
            head=particular_delete(head,d);
            num_node--;
       break;
-
-      case 9:
+      
+       case 9:
+          head=reverse(head);
+       break;
+      case 10:
           print__link(head);
        break;
       
-      case 10:
+      case 11:
          break;
       
       default:
@@ -300,7 +326,7 @@ int main()
       break;
 
     }
-    if(choice==10)
+    if(choice==11)
        break;
    }
 
