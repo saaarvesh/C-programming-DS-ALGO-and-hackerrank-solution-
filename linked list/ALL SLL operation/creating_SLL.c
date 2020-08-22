@@ -230,8 +230,8 @@ struct node *reverse(struct node *cur){
 
 int main()
 {
-   int num_node,choice,after,info,d_after,d;
-   int count=0;
+   int num_node,choice=0,after,info,d_after,d;
+   
    struct node *head;
    
 
