@@ -1,6 +1,6 @@
 /* 
   Advantage of  linklist over Array -  We can create them dynamically (particularly in C)
-  Disadvantage of Linklist - To access any element it takes O(1) in worst case (sequential access) while in Array we can access any element in O(1) (random access is possible in Array) */
+  Disadvantage of Linklist - To access any element it takes O(n) in worst case (sequential access) while in Array we can access any element in O(1) (random access is possible in Array) */
     
 /* this code contains all the standard operations in Singly Linklist
     1.create new node 
@@ -43,7 +43,7 @@ struct node *createfirst_node(struct node *head,int i)
   
 }
 
-//Insert at the beginning
+//Insert Node at the beginning
 struct node *beginning(struct node *head)
 {
   int key=0;
@@ -201,19 +201,19 @@ struct node *particular_ddelete(struct node *head,int d)
 
 }
 
-//PRINTING
-void print__link(struct node *head) {
-   struct node *t;
-   t=head;
-   printf("this linked list is:\n");
-   
-   while (t)
-   {
-       printf("%d ",t->data);
-       t=t->next;
+   //PRINTING 
+   void print__link(struct node *head) {
+      struct node *t;
+      t=head;
+      printf("this linked list is:\n");
+      
+      while (t)
+      {
+         printf("%d ",t->data);
+         t=t->next;
+      }
+      printf("\n");
    }
-   printf("\n");
-}
 
 //revesing SLL
 struct node *reverse(struct node *cur){
