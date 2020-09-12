@@ -1,17 +1,22 @@
+/* 
+  Advantage of  linklist over Array -  We can create them dynamically (particularly in C)
+  Disadvantage of Linklist - To access any element it takes O(1) in worst case (sequential access) while in Array we can access any element in O(1) (random access is possible in Array) */
+    
+/* this code contains all the standard operations in Singly Linklist
+    1.create new node 
+    2.Insert New Node:-
+           a. at beginning
+           b. at end
+           c. between any two node
+    3.Delete Node:-
+           a. From the beginning
+           b. From the end
+           c. From between any two node
+    */
 #include<stdio.h>
 #include<stdlib.h>
 
-struct node *createfirst_node(struct node *head,int i);
-struct node *add_node(struct node *head,int i);
-struct node *between(struct node *head,int after);
-struct node *data_after(struct node *head,int info);
-void print__link(struct node *head);
-struct node *beginning(struct node *head);
-struct node *first_delete(struct node *head);
-struct node *last_delete(struct node *head);
-struct node  *particular_delete(struct node *head,int d_after);
-struct node *particular_ddelete(struct node *head,int d);
-struct node *reverse(struct node *head);
+
 struct node{
     int data;
     struct node *next;
@@ -38,7 +43,7 @@ struct node *createfirst_node(struct node *head,int i)
   
 }
 
-//at the beginning
+//Insert at the beginning
 struct node *beginning(struct node *head)
 {
   int key=0;
@@ -55,7 +60,7 @@ struct node *beginning(struct node *head)
   
 
 
-//node at the end
+//Insert node at the end
 struct node *add_node(struct node *head,int i)
 {
    int key=0;
@@ -75,7 +80,7 @@ struct node *add_node(struct node *head,int i)
 
 }
 
-//after particular node or b\w 2 node
+//after particular node
 struct node *between(struct node *head,int after)
 {
    int key=0,count=0;
@@ -123,6 +128,7 @@ struct node *data_after(struct node *head,int info)
 
 }
 
+ //From the beginning
 struct node *first_delete(struct node *head)
 {
 
@@ -134,6 +140,7 @@ struct node *first_delete(struct node *head)
 
 }
 
+//From the end          
 struct node *last_delete(struct node *head)
 {
 
@@ -150,6 +157,7 @@ struct node *last_delete(struct node *head)
 
 }
 
+// Delete particular node
 struct node *particular_delete(struct node *head,int d_after)
 {
 
@@ -174,6 +182,7 @@ struct node *particular_delete(struct node *head,int d_after)
 
 }
 
+//Delete particular node having particular data
 struct node *particular_ddelete(struct node *head,int d)
 {
 
