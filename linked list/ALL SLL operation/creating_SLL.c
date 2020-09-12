@@ -12,6 +12,7 @@
            a. From the beginning
            b. From the end
            c. From between any two node
+    4.Traversing LL
     */
 #include<stdio.h>
 #include<stdlib.h>
