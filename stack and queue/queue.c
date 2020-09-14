@@ -1,3 +1,11 @@
+/* for queue implementation we use circular Array representaion.
+   
+   if we use normal Array then for enqueue it will take O(1) but      for Dequeue it will take O(n) i.e we also have to shift element    1 step backward.
+   
+   But for circular Array representaion :-
+   Enqueue operation on queue timecomplexity - O(1).
+   Dequeue operation on queue timecomplexity - O(1).*/
+
 #include<stdio.h>
 #include<stdlib.h>
 int r = 0, f = 0;
